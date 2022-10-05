@@ -1,23 +1,18 @@
-while True:
-    try:
-        hours=float(input('Input hours worked:\n'))
-        break
-    except:
-        print("Try again, enter a numerical value:")
-
-while True:
-    try:
-        rate=float(input('Input rate:\n'))
-        break
-    except:
-        print("Try again, enter a numerical value:")
-        
-    if hours > 40:
-            overtime=hours-40
-            overtime_rate= rate*1.5
-            overtime_pay=overtime*overtime_rate
-            total_pay=40*rate+overtime_pay
+a = float(input("Enter Number 1: "))
+b = float(input("Enter Number 2: "))
+c = float(input("Enter Number 3: "))
+if a>b:
+    if a<c:
+        med=a
+    elif b> c:
+        med=b
     else:
-            total_pay=hours*rate
-    
-print(f'This is your total pay: ${total_pay}')
+        med=c
+else:
+    if a>c:
+        med=a
+    elif b<c:
+        med=b
+    else:
+        med=c
+print("The Median is",med)
