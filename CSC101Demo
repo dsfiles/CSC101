@@ -1,1 +1,12 @@
-test code
+amount = int(input("Enter sale price: "))
+if(amount>0):
+    if amount>=200:
+        dis = amount*0.20  
+    if amount>=100>=200:
+        dis = amount*0.15 
+    if amount>=50>=100:
+        dis = amount*0.10
+    if amount<=50:
+        dis = amount*0.05
+    print("disount : ",dis)
+    print("net pay : ",amount-dis)
