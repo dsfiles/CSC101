@@ -1,12 +1,12 @@
-amount = int(input("Enter sale price: "))
-if(amount>0):
-    if amount>=200:
-        dis = amount*0.20  
-    if 200>amount>=100:
-        dis = amount*0.15 
-    if amount<=50:
-        dis = amount*0.05
-    if 100>amount>=50:
-        dis = amount*0.10
-    print("disount : ",dis)
-    print("net pay : ",amount-dis)
+hours = float(input("How many hours did the employee work this week?"))
+pay_rate = float (input("What is the employee's pay rate?"))
+if float (hours) > 40:
+    overtime = float (hours - 40)
+    overtime_pay_rate = float (pay_rate * 1.5)
+    weekly_overtime = float (overtime * overtime_pay_rate)
+    standard_pay = float (40* pay_rate)
+    overall_pay = float (weekly_overtime + standard_pay)
+    print ("The employees paycheck for this week is: $" + str(overall_pay))
+else:
+    weekly_pay = float (hours *pay_rate)
+    print ("The employees paycheck for this week is: $" + str(weekly_pay))
