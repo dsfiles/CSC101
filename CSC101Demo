@@ -1,17 +1,23 @@
 while True:
     try:
-        total_pay=0
         hours=float(input('Input hours worked:\n'))
+        break
+    except:
+        print("Try again, enter a numerical value:")
+
+while True:
+    try:
         rate=float(input('Input rate:\n'))
-        if hours > 40:
+        break
+    except:
+        print("Try again, enter a numerical value:")
+        
+    if hours > 40:
             overtime=hours-40
             overtime_rate= rate*1.5
             overtime_pay=overtime*overtime_rate
             total_pay=40*rate+overtime_pay
-        else:
+    else:
             total_pay=hours*rate
-        break
-    except:
-        print("Try again, enter a numerical value:")
     
 print(f'This is your total pay: ${total_pay}')
