@@ -1,33 +1,6 @@
-a = float(input("Enter Number 1: "))
-b = float(input("Enter Number 2: "))
-c = float(input("Enter Number 3: "))
-if a>b:
-    if a<c:
-        med=a
-    elif b> c:
-        med=b
-    else:
-        med=c
-else:
-    if a>c:
-        med=a
-    elif b<c:
-        med=b
-    else:
-        med=c
-print("The Median is",med)
-
-#################################################
-
-def find_median(x, y, z):
-    if (x < y and y < z) or (x > y and y > z):
-        median = y
-    elif (y > z and z > x) or (y < z and z < x):
-        median = z
-    else:
-        median = x
-    return median
-
-x = int(input('Please input first value.\n'))
-y = int(input('Please input second value.\n'))
-z = int(input('Please input third value.\n'))
+word = 'Nevertheless'
+count = 0
+for letter in word:
+    if letter == 'e':
+        count = count + 1
+print(count)
