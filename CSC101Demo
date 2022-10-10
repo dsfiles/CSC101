@@ -1,5 +1,6 @@
 data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
 atpos = data.find('@')
-sppos = data.find(' ',atpos)
-host = data[atpos+1:sppos]
-print(host)
+spposr = data.find(' ',atpos)
+spposl = data.rfind(' ', 0, atpos)
+eml= data[spposl+1:spposr]
+print(eml)
