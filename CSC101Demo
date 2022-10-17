@@ -1,8 +1,27 @@
-while True:
-    line = input('> ')
-    if line[0] == '#':
-        continue
-    if line == 'done':
-        break
-    print(line)
-print('Done!')
+def grading_rubric():
+    ng = int(input("Percentage Grade: "))
+    if int(ng)>59 and int(ng)<63 :
+        ng = "D-"
+    elif int(ng)>63 and int(ng)<66 :
+        ng = "D"
+    elif int(ng)>66 and int(ng)<69 :
+        ng = "D+"
+    elif int(ng)>70 and int(ng)<72 :
+        ng = "C-"
+    elif int(ng)>73 and int(ng)<76 :
+        ng = "C"
+    elif int(ng)>77 and int(ng)<79 :
+        ng = "C+"
+    elif int(ng)>80 and int(ng)<82 :
+        ng = "B-"
+    elif int(ng)>83 and int(ng)<86 :
+        ng = "B"
+    elif int(ng)>86 and int(ng)<89 :
+        ng = "B+"
+    elif int(ng)>90 and int(ng)<94 :
+        ng = "A-"
+    elif int(ng)>95 :
+        ng = "A"
+    else :
+        ng = "F"
+    print("Student Grade: " + ng)
